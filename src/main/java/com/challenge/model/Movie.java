@@ -1,8 +1,8 @@
 package com.challenge.model;
 
 import java.io.Serializable;
+import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 import javax.persistence.Column;
@@ -12,6 +12,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.sun.istack.NotNull;
 
 import lombok.Data;
@@ -35,7 +38,10 @@ public class Movie implements Serializable{
 	@Column
 	private String tittle;
 	@Column
-	private Date creationDate;
+	@DateTimeFormat(iso = DateTimeFormat.ISO.DATE)
+	@JsonFormat(pattern = "MM-dd-yyyy")	
+	private LocalDate creationDate;
+	
 	@Column
 	@NotNull
     private int rating;
