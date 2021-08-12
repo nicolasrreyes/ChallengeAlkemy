@@ -16,7 +16,7 @@ import com.challenge.model.Personage;
 import com.challenge.services.PersonageService;
 
 @RestController
-@RequestMapping(value = "/")
+@RequestMapping(value = "/character")
 public class PersonageRestController {
 	
 	@Autowired

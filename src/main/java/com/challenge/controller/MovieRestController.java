@@ -34,8 +34,8 @@ public class MovieRestController {
 	
 	
 	@PostMapping(value = "/save")
-	public ResponseEntity<Movie> save(@RequestBody Movie Movie){
-		Movie obj = movieService.save(Movie);
+	public ResponseEntity<Movie> save(@RequestBody Movie movie){
+		Movie obj = movieService.save(movie);
 		return new ResponseEntity<Movie>(obj, HttpStatus.OK);
 	}
 	

@@ -16,6 +16,7 @@ import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.SignatureAlgorithm;
 
 @RestController
+
 public class UserController {
 	@PostMapping("user")
 	public User login(@RequestParam("user") String username, @RequestParam("password") String pwd) {
