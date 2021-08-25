@@ -13,7 +13,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.challenge.model.Movie;
-import com.challenge.model.Movie;
 import com.challenge.services.MovieService;
 
 @RestController
